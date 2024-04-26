@@ -5,7 +5,7 @@ import HomeIcon from '../assets/homeicon.png';
 const PathDisplayComponent = ({ subject, topic }) => {
   const location = useLocation();
   const currentPath = location.pathname;
-  const pathName = currentPath.replace('/', ' ˃ ');
+  const pathName = currentPath.replace('/', ' > ');
 
   return (
     <div className="path-display-outer">
@@ -13,11 +13,11 @@ const PathDisplayComponent = ({ subject, topic }) => {
       <span>
         {pathName}
         {' '}
-        {'>'}
+        {subject && <span>{'>'}</span>}
         {' '}
         {subject}
         {' '}
-        {'>'}
+        {topic && <span>{'>'}</span>}
         {' '}
         {topic}
       </span>

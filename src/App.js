@@ -5,11 +5,13 @@ import ContactPage from './pages/ContactPage';
 import AppLogin from './pages/LoginPage';
 import NavigationHeader from './components/Navigation';
 import FaqSection from './components/FaqSection';
+import PathDisplayComponent from './components/PathDisplayComponent';
 
 const App = () => (
   <Router>
     <div className="app-outer">
       <NavigationHeader />
+      <PathDisplayComponent />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/flashcards" element={<FlashcardsPage />} />

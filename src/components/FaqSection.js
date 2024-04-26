@@ -17,10 +17,8 @@ const FaqSection = () => {
     },
   ];
 
-  // State to manage visibility of answers for each question
   const [showAnswers, setShowAnswers] = useState(Array(content.length).fill(false));
 
-  // Function to toggle the visibility of answer for a specific question
   const handleShowAnswer = (index) => {
     const newShowAnswers = [...showAnswers];
     newShowAnswers[index] = !newShowAnswers[index];
@@ -36,12 +34,10 @@ const FaqSection = () => {
             <div key={uuidv4()}>
               <div className="each-question">
                 {question}
-                {/* onClick handler to toggle visibility of answer */}
                 <button type="button" className="down-action-arrow" onClick={() => handleShowAnswer(index)}>
                   &#8964;
                 </button>
               </div>
-              {/* Conditionally render answer based on state */}
               <div className="each-answer" style={{ display: showAnswers[index] ? 'block' : 'none' }}>
                 {answer}
               </div>

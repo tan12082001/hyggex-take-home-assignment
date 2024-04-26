@@ -1,41 +1,12 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import HintIcon from '../assets/hinticon.png';
 import AudioIcon from '../assets/audioicon.png';
 import AgainIcon from '../assets/againicon.png';
 import MaxIcon from '../assets/maximizeicon.png';
 
-const FlashCardStudy = () => {
-  const study = [
-    {
-      content: '9 + 6 + 7x - 2x - 3',
-    },
-    {
-      content: '2',
-    },
-    {
-      content: '3',
-    },
-    {
-      content: '4',
-    },
-    {
-      content: '5',
-    },
-    {
-      content: '6',
-    },
-    {
-      content: '7',
-    },
-    {
-      content: '8',
-    },
-    {
-      content: '9',
-    },
-  ];
-
+const FlashCardStudy = ({ study }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
@@ -89,6 +60,14 @@ const FlashCardStudy = () => {
       </div>
     </div>
   );
+};
+
+FlashCardStudy.propTypes = {
+  study: PropTypes.arrayOf(
+    PropTypes.shape({
+      content: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default FlashCardStudy;

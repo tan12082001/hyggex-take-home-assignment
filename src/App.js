@@ -8,7 +8,7 @@ import FaqSection from './components/FaqSection';
 
 const App = () => (
   <Router>
-    <div className="app-outer">
+    <div className="app-outer flex flex-col min-h-screen">
       <NavigationHeader />
       <Routes>
         <Route path="/" element={<HomePage />} />

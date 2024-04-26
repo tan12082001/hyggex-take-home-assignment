@@ -24,14 +24,14 @@ const FlashcardPreview = () => {
   };
 
   return (
-    <div className="flashcard-section-outer">
+    <div className="flashcard-section-outer w-full h-full">
       <PathDisplayComponent subject={selectedSubject} topic={selectedTopic} />
-      <div className="choose-subject-topic-outer">
+      <div className="choose-subject-topic-outer flex flex-row justify-between items-center text-lg font-medium">
         {storeData.map((subject, index) => (
-          <div key={subject.subjectName}>
+          <div key={subject.subjectName} className="bg-yellow">
             <h3>
               {subject.subjectName}
-              <button type="button" className="down-action-arrow" onClick={() => handleShowTopics(index)}>
+              <button type="button" className="down-action-arrow px-2 pb-2 pt-0" onClick={() => handleShowTopics(index)}>
                 &#8964;
               </button>
             </h3>
@@ -48,7 +48,7 @@ const FlashcardPreview = () => {
           </div>
         ))}
       </div>
-      <div className="flashcard-section-heading">
+      <div className="flashcard-section-heading text-2xl font-semibold bg-gradient-to-b from-blue-900 to-blue-700 text-transparent bg-clip-text">
         {selectedTopic && (
           <>
             {selectedTopic}
@@ -60,7 +60,7 @@ const FlashcardPreview = () => {
         )}
       </div>
       <div className="topic-flashcard">
-        <div className="flashcard-header">
+        <div className="flashcard-header flex flex-row gap-4 text-gray text-lg mx-auto">
           <div className="header-each-item">
             <button type="button" onClick={() => handleOptionClick('study')} className="flashcard-item-link">Study</button>
           </div>

@@ -8,7 +8,7 @@ const PathDisplayComponent = ({ subject, topic }) => {
   const pathName = currentPath.replace('/', ' > ');
 
   return (
-    <div className="path-display-outer">
+    <div className="path-display-outer flex flex-row items-center text-lg font-medium text-gray">
       <img src={HomeIcon} alt="Home" className="home-icon" />
       <span>
         {pathName}

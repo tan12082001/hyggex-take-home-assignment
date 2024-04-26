@@ -26,18 +26,18 @@ const NavigationHeader = () => {
   ];
 
   return (
-    <div className="desk-navigation-bar">
+    <div className="desk-navigation-bar flex flex-row justify-between px-12 py-7 items-center">
       <div className="desk-nav-bar-logo">
         <img src={NavLogo} alt="hyggex-logo" className="nav-logo-img" />
       </div>
-      <div className="desk-nav-bar-items-login">
+      <div className="desk-nav-bar-items-login flex flex-row gap-10 items-center">
         {navPages.map(({
           to, label,
         }) => (
           <div key={to}>
             <Link
               to={to}
-              className={label === 'Login' ? 'nav-bar-login bg-gradient-to-b from-06286e-900 to-164eco-600' : 'each-nav-bar-item'}
+              className={label === 'Login' ? 'nav-bar-login bg-gradient-to-b from-blue-900 to-blue-600 border-none rounded-full text-white py-2 px-4' : 'each-nav-bar-item'}
             >
               {label}
             </Link>

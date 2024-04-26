@@ -26,14 +26,18 @@ const FlashCardStudy = ({ study }) => {
   const eachSlideStyles = {
     flex: '0 0 auto',
     width: '100%',
+    color: 'white',
+    fontSize: '18px',
+    fontWeight: '700',
+    padding: '170px 200px',
     transition: 'transform 0.5s ease',
     transform: `translateX(-${currentSlide * 100}%)`,
   };
 
   return (
-    <div className="flashcards-screen">
-      <div className="flashcards-slides">
-        <div className="hint-audio-bar">
+    <div className="flashcards-screen flex flex-col">
+      <div className="flashcards-slides bg-gradient-to-b from-blue-900 to-blue-700">
+        <div className="hint-audio-bar flex flex-row justify-between">
           <img src={HintIcon} alt="Hint" className="flashcard-hint" />
           <img src={AudioIcon} alt="Audio" className="flashcard-audio" />
         </div>
@@ -45,16 +49,16 @@ const FlashCardStudy = ({ study }) => {
           ))}
         </div>
       </div>
-      <div className="flashcard-footer">
+      <div className="flashcard-footer flex flex-row items-center justify-between">
         <img src={AgainIcon} alt="again" className="flashcard-again" />
-        <div className="previous-next-count-outer">
-          <button type="button" className="next-slide-button" onClick={nextSlide}>&#x2c3;</button>
-          <div className="slide-count">
+        <div className="previous-next-count-outer flex flex-row gap-4">
+          <button type="button" className="next-slide-button w-9 h-9 bg-gradient-to-b from-blue-900 to-blue-700 text-white text-xl rounded-full" onClick={nextSlide}>&#x2c2;</button>
+          <div className="slide-count flex items-center text-lg">
             {currentSlide + 1}
             /
             {study.length}
           </div>
-          <button type="button" className="previous-slide-button" onClick={prevSlide}>&#x2c2;</button>
+          <button type="button" className="previous-slide-button w-9 h-9 bg-gradient-to-b from-blue-900 to-blue-700 text-white text-xl rounded-full" onClick={prevSlide}>&#x2c3;</button>
         </div>
         <img src={MaxIcon} alt="maximize" className="flashcard-maximize" />
       </div>

@@ -26,11 +26,11 @@ const NavigationHeader = () => {
   ];
 
   return (
-    <div className="desk-navigation-bar flex flex-row justify-between px-12 py-7 items-center">
+    <div className="desk-navigation-bar md:flex-row flex flex-col justify-between md:px-24 px-10 py-7 items-center">
       <div className="desk-nav-bar-logo">
         <img src={NavLogo} alt="hyggex-logo" className="nav-logo-img" />
       </div>
-      <div className="desk-nav-bar-items-login flex flex-row gap-10 items-center">
+      <div className="desk-nav-bar-items-login flex flex-row gap-4 md:gap-10 items-center">
         {navPages.map(({
           to, label,
         }) => (

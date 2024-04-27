@@ -26,8 +26,13 @@ const PathDisplayComponent = ({ subject, topic }) => {
 };
 
 PathDisplayComponent.propTypes = {
-  subject: PropTypes.string.isRequired,
-  topic: PropTypes.string.isRequired,
+  subject: PropTypes.string,
+  topic: PropTypes.string,
+};
+
+PathDisplayComponent.defaultProps = {
+  subject: null,
+  topic: null,
 };
 
 export default PathDisplayComponent;

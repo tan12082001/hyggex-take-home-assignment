@@ -67,7 +67,7 @@
 
  <a name="live-demo"></a>
 
-- [HyggeX Self-Study Webpage]()
+- [HyggeX Self-Study Webpage](https://hyggex-webpage-tanmayimanku.vercel.app/flashcards)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
